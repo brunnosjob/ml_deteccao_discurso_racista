@@ -107,7 +107,8 @@ elif pag == 'Sobre o modelo':
       além de compreender o que não é um cachorro.
          
       As limitações do modelo residem em seu aprendizado. A língua, enquanto linguagem humana, é um fenômeno extremamente versátil e complexo. Há uma diversidade de modos de se falar a mesma coisa, 
-      sendo assim, o modelo não viu todas as possibilidades de discurso racista e não racista. Portanto, há discursos racistas que podem não ser identificados, assim como, podem haver 
+      sendo assim, o modelo não viu todas as possibilidades de discurso racista e não racista, havendo sido treinado com 379 palavras e cerca de 500 discursos. 
+      Portanto, há discursos racistas que podem não ser identificados, assim como, podem haver 
       discursos não racistas entendidos pelo modelo como racistas.
          
       Para o desenvolvimento de um modelo mais preciso na identificação, o trabalho requer um maior corpus (conjunto de dados textuais/linguísticos), com diversidade de discurso e com dados de qualidade, 
@@ -115,7 +116,9 @@ elif pag == 'Sobre o modelo':
       
       #### Limitações do presente modelo
       
-      O modelo desenvolvido é para projeto de portfólio. Serve como um protótipo para demonstração de conhecimento. Suas limitações residem no corpus usado. A quantidade de exemplos 
+      O modelo desenvolvido é para projeto de portfólio. Serve como um protótipo para demonstração de conhecimento. Suas limitações residem no corpus usado, o qual apresenta 379 
+      palavras distintas e aproximadamente 500 discursos distintos.
+      A quantidade de exemplos 
       inseridos na aprendizagem do modelo é limitada diante da diversidade de discursos criminosos que se enquadram como crimes de injúria racial ou de racismo.
          ''')
         
