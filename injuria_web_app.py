@@ -45,13 +45,12 @@ if pag == 'Experimentar o modelo':
                O presente modelo de machine learning serve para detecção de crimes de injúria racial e/ou de racismo cometidos em comentários de rede social.
                O teste do modelo não compromete sua pessoa. Você pode simular discursos racistas ou não racistas para experimentar a eficiência do modelo.
                ''')
+    #Inserção da frase
+    st.subheader('Teste o modelo com diferentes discursos')
+    DISCURSO = st.text_input('Faça comentários como se estivesse em uma publicação de rede social:')
 
-      #Inserção da frase
-      st.subheader('Teste o modelo com diferentes discursos')
-      DISCURSO = st.text_input('Faça comentários como se estivesse em uma publicação de rede social:')
-
-      #Definição de dicionário
-      palavra_posicao = {'ferrou': 0, 'foi': 1, 'acredito': 2, 'pensei': 3, 'fofo': 4, 'burros': 5, 'gentil': 6, 'perfeita': 7, 'ser': 8, 'bolsonaristas': 9, 'prefiro': 10, 
+    #Definição de dicionário
+    palavra_posicao = {'ferrou': 0, 'foi': 1, 'acredito': 2, 'pensei': 3, 'fofo': 4, 'burros': 5, 'gentil': 6, 'perfeita': 7, 'ser': 8, 'bolsonaristas': 9, 'prefiro': 10, 
                             'volta': 11, 'tinha': 12, 'burro': 13, 'dura': 14, 'amor': 15, 'no': 16, 'chineses': 17, 'triste': 18, 'sua': 19, 'isso': 20, 
                             'idiota': 21, 'sai': 22, 'ele': 23, 'porcos': 24, 'coitado': 25, 'legal': 26, 'pássaro': 27, 'até': 28, 'jamais': 29, 'besta': 30,
                            'deveriam': 31, 'muito': 32, 'deles': 33, 'leal': 34, 'deve': 35, 'índia': 36, 'deixa': 37, 'da': 38, 'lamentável': 39, 'sexy': 40,
