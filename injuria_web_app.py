@@ -110,7 +110,7 @@ if pag == 'Experimentar o modelo':
     elif classificacao == 0:
         st.write("A fala '{}' NÃO é um crime de injúria racial ou racismo.".format(DISCURSO))
         
-    st.markdown('Analise seu discurso e compare com a resposta/compreensão do modelo')
+    st.markdown('__Analise seu discurso e compare com a resposta/compreensão do modelo__')
                            
 elif pag == 'Sobre o modelo':
          
