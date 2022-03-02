@@ -40,15 +40,6 @@ if pag == 'Experimentar o modelo':
                   O teste do modelo não compromete sua pessoa. Você pode simular discursos racistas ou não racistas para experimentar a eficiência do modelo.
                   ''')
 
-#Informe
-#st.write('''
-#As redes sociais, como Instagram, se mostram um espaço em que o discurso de ódio é encorajado pela distância.
-#Contudo, o fato é que, embora haja distância, o criminoso deve ser justamente punido.
-#
-#Sendo assim, essa aplicação web demonstra a utilidade de um modelo de machine learning para auxiliar com a 
-#identificação de crimes de injúria racial e/ou de racismo em comentários de redes sociais.
-#''')
-
          #Inserção da frase
          st.subheader('Teste o modelo com diferentes discursos')
          DISCURSO = st.text_input('Faça comentários como se estivesse em uma publicação de rede social:')
