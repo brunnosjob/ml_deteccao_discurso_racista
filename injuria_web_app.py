@@ -27,8 +27,7 @@ st.sidebar.markdown("- [Github](https://github.com/brunnosjob)")
 
 
 #Cabeçalho
-st.header('Modelo de machine learning para detecção de crime de injúria racial e/ou de racismo')
-st.subheader('Detectando discursos criminosos em comentários de redes sociais')
+st.subheader('Detecção de crime de injúria racial e/ou de racismo')
 st.subheader(' ')
 
 #Informe
