@@ -82,9 +82,7 @@ if pag == 'Experimentar o modelo':
     elif classificacao == 0:
         st.write("O discurso '{}' NÃO VIOLA AS LEIS de injúria racial ou racismo.".format(DISCURSO))
         
-    st.markdown('''
-    Para compreensão acerca do aprendizado do modelo e suas limitações, navegue para a página __Sobre o modelo__ e leia o tópico __Sobre o treinamento do modelo__.
-    ''')
+  
                            
 elif pag == 'Sobre o modelo':
          
