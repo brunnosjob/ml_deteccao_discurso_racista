@@ -122,7 +122,7 @@ elif pag == 'Sobre o modelo':
       Para desenvolvimento do modelo, utilizei técnicas de Ciência de Dados e Processamento de Linguagem Natural.
          
       A presente aplicação web (interface em que está o modelo de machine learning) serve para interação pública, como experiência pessoal. 
-      A partir da experimentação, o público pode compreender a utilidade de um modelo de machine learning para auxiliar com a 
+      A partir da experimentação, o público pode compreender a utilidade de um modelo de machine learning como auxiliador para
       identificação de crimes de injúria racial e/ou de racismo em comentários de redes sociais.
       
       #### Sobre o treinamento do modelo
