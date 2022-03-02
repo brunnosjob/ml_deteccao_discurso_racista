@@ -88,28 +88,28 @@ if pag == 'Experimentar o modelo':
                            'nojento': 351, 'antijudeu': 352, 'gosto': 353, 'maldoso': 354, 'negra': 355, 'vou': 356, 'dormindo': 357, 'macumbeiro': 358, 'morram': 359, 'negro': 360,
                            'morte': 361, 'todo': 362, 'arrombado': 363, 'desgraçado': 364, 'com': 365, 'preguiçoso': 366}
 
-      #Função para vetorização de discursos
-      def vetorizacao(texto):
-      vetor = [0] * 367
-      for token in texto.split():
-      token = token.lower()
-      if token in palavra_posicao:
-          posicao = palavra_posicao[token]
+    #Função para vetorização de discursos
+    def vetorizacao(texto):
+    vetor = [0] * 367
+    for token in texto.split():
+    token = token.lower()
+    if token in palavra_posicao:
+        posicao = palavra_posicao[token]
           vetor[posicao] += 1
-      return vetor
+    return vetor
          
-      #Importação do modelo
-      with open('identificador_logistico.pkl', 'rb') as file:
-      modelo = pickle.load(file)
+    #Importação do modelo
+    with open('identificador_logistico.pkl', 'rb') as file:
+    modelo = pickle.load(file)
          
-      #Programa para classificação do discurso
-      vetor = vetorizacao(DISCURSO)
-      vetor = np.array([vetor])
-      classificacao = modelo.predict(vetor)
-      if classificacao == 1:
-          st.write("A fala '{}' É UM CRIME de injúria racial ou racismo.".format(DISCURSO))
-      elif classificacao == 0:
-          st.write("A fala '{}' NÃO é um crime de injúria racial ou racismo.".format(DISCURSO))
+    #Programa para classificação do discurso
+    vetor = vetorizacao(DISCURSO)
+    vetor = np.array([vetor])
+    classificacao = modelo.predict(vetor)
+    if classificacao == 1:
+        st.write("A fala '{}' É UM CRIME de injúria racial ou racismo.".format(DISCURSO))
+    elif classificacao == 0:
+        st.write("A fala '{}' NÃO é um crime de injúria racial ou racismo.".format(DISCURSO))
                            
 elif pag == 'Sobre o modelo':
          
