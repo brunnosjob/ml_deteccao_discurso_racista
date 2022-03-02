@@ -41,10 +41,7 @@ if pag == 'Experimentar o modelo':
     #Cabeçalho
     st.markdown('__O modelo está sendo aperfeiçoado__')
     st.subheader('Detecção de crime de injúria racial e/ou de racismo em discurso')
-    st.write('''
-               O presente modelo de machine learning serve para detecção de crimes de injúria racial e/ou de racismo cometidos em comentários de rede social.
-               O teste do modelo não compromete sua pessoa. Você pode simular discursos racistas ou não racistas para experimentar a eficiência do modelo.
-               ''')
+    
     #Inserção da frase
     st.subheader('Teste o modelo com diferentes discursos')
     st.markdown('''
@@ -86,10 +83,6 @@ if pag == 'Experimentar o modelo':
         st.write("O discurso '{}' NÃO VIOLA AS LEIS de injúria racial ou racismo.".format(DISCURSO))
         
     st.markdown('''
-    __Analise seu discurso e compare com a resposta/compreensão do modelo__
-    
-    #### Observação:
-    
     Para compreensão acerca do aprendizado do modelo e suas limitações, navegue para a página __Sobre o modelo__ e leia o tópico __Sobre o treinamento do modelo__.
     ''')
                            
