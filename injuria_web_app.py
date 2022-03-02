@@ -123,7 +123,7 @@ if pag == 'Experimentar o modelo':
     st.markdown('''
     __Analise seu discurso e compare com a resposta/compreensão do modelo__
     
-    #### Observação
+    #### Observação:
     
     Para compreensão acerca do aprendizado do modelo e suas limitações, navegue para a página __Sobre o modelo__.
     ''')
