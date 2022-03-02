@@ -103,6 +103,6 @@ vetor = np.array([vetor])
 classificacao = modelo.predict(vetor)
 if classificacao == 1:
     st.write("A fala '{}' É UM CRIME de injúria racial ou racismo.".format(DISCURSO))
-else:
+elif classificacao == 0:
     st.write("A fala '{}' NÃO é um crime de injúria racial ou racismo.".format(DISCURSO))
 
