@@ -56,7 +56,7 @@ religião e procedência nacional, ampliando a proteção para vários tipos de 
 
 #Inserção da frase
 st.subheader('Teste o modelo com diferentes discursos')
-DISCURSO = st.text_input('_Faça comentários como se estivesse em uma publicação de rede social:_')
+DISCURSO = st.text_input('__Faça comentários como se estivesse em uma publicação de rede social:__')
 
 #Definição de dicionário
 palavra_posicao = {'ferrou': 0, 'foi': 1, 'acredito': 2, 'pensei': 3, 'fofo': 4, 'burros': 5, 'gentil': 6, 'perfeita': 7, 'ser': 8, 'bolsonaristas': 9, 'prefiro': 10, 
