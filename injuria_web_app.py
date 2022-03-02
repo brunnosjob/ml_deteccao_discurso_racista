@@ -27,7 +27,7 @@ st.sidebar.markdown('Em breve haverá artigo')
 
 #Criação de páginas
 st.sidebar.title('Menu')
-pag = st.sidebar.selectbox('Selecione a página:', ['Experimentar o modelo', 'Sobre o modelo'])
+pag = st.sidebar.selectbox('Selecione a página:', ['Experimentar o modelo', 'Sobre o modelo', 'Sobre os crimes'])
 st.markdown(' ')
 
 st.sidebar.markdown("Redes Sociais :")
@@ -139,3 +139,26 @@ elif pag == 'Sobre o modelo':
       Para o desenvolvimento de um modelo mais preciso na identificação, o trabalho requer um maior corpus (conjunto de dados textuais/linguísticos), com diversidade de discurso e com dados de qualidade, 
       condizentes ao desenvolvimento do modelo.
          ''')
+        
+elif pag == 'Sobre os crimes':
+    
+    st.subheader('Sobre os crimes')
+    st.markdown('''
+    #### Injúria racial
+    
+    O crime de injúria racial está previsto no Código Penal, no parágrafo 3ª do artigo 140. Caracteriza-se pela ofensa à dignidade ou à integridade do indivíduo,
+    com base em elementos referentes à sua raça, cor, etnia, religião, origem ou a condição da pessoa idosa ou portadora de deficiência. A pessoa idosa é caracterizada 
+    pela idade igual ou superior a 60 anos, de acordo, com o Estatuto do Idoso, previsto na Lei Federal 10.741/03, artigo 1ª.
+    
+    #### Racismo
+    
+    Os crimes de racismo estão previstos na Lei 7.716/1989, conhecida como Lei de Racismo.
+    A Lei foi elaborada para regulamentar a punição de crimes resultantes de preconceito de raça ou de cor. 
+    Contudo, foram acrescentados à referida lei os termos etnia, religião e procedência nacional, através da Lei nº 9.459/13, 
+    ampliando a proteção para vários tipos de intolerância. As penas previstas são mais severas e podem chegar até a 5 anos de reclusão.
+    
+    #### Diferença entre injúria racial e racismo
+    
+    O que diferencia os crimes é o direcionamento da conduta. Enquanto a injúria racial é a ofensa direcionada a um indivíduo especifico, 
+    o crime de racismo é a ofensa contra uma coletividade, por exemplo, toda uma raça ou etnia.
+    ''')
