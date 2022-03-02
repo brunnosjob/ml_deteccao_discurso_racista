@@ -28,7 +28,7 @@ st.sidebar.markdown(' ')
 
 #Criação de páginas
 st.sidebar.title('Menu')
-pag = st.sidebar.selectbox('Selecione a página:', ['Experimentar o modelo', 'Sobre o modelo']
+pag = st.sidebar.selectbox('Selecione a página:', ['Experimentar o modelo', 'Sobre o modelo'])
 st.markdown(' ')
 
 st.sidebar.markdown("Redes Sociais :")
