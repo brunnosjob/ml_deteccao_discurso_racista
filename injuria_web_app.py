@@ -34,6 +34,10 @@ st.sidebar.markdown("- [Github](https://github.com/brunnosjob)")
 
 #Cabeçalho
 st.subheader('Detecção de crime de injúria racial e/ou de racismo')
+st.write('
+         O presente modelo de machine learning serve para detecção de crimes de injúria racial e/ou de racismo cometido em comentários de rede social.
+         O teste do modelo não compromete sua pessoa. Você pode simular discursos racistas ou não racistas para experimentar a eficiência do modelo.
+         ')
 
 #Informe
 #st.write('''
