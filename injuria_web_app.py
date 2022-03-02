@@ -96,10 +96,6 @@ def vetorizacao(texto):
 #Importação do modelo
 with open('identificador_logistico.pkl', 'rb') as file:
     modelo = pickle.load(file)
-    
-#Aplicação do modelo em lógica
-#Testando o modelo
-DISCURSO = 'O Lula odeia os negros'
 
 #Programa para classificação do discurso
 vetor = vetorizacao(DISCURSO)
