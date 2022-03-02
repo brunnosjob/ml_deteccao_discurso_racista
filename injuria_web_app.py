@@ -39,13 +39,13 @@ st.sidebar.markdown("- [Github](https://github.com/brunnosjob)")
 #Desenvolvimento das páginas
 if pag == 'Experimentar o modelo':
     #Cabeçalho
+    st.markdown('__O modelo está sendo aperfeiçoamento__')
     st.subheader('Detecção de crime de injúria racial e/ou de racismo em discurso')
     st.write('''
                O presente modelo de machine learning serve para detecção de crimes de injúria racial e/ou de racismo cometidos em comentários de rede social.
                O teste do modelo não compromete sua pessoa. Você pode simular discursos racistas ou não racistas para experimentar a eficiência do modelo.
                ''')
     #Inserção da frase
-    st.markdown('__O modelo está sendo aperfeiçoamento__')
     st.subheader('Teste o modelo com diferentes discursos')
     st.markdown('''
     __Exemplos__
