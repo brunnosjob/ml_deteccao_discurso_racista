@@ -42,7 +42,7 @@ identificação de crimes de injúria racial e/ou de racismo em comentários de 
 
 #Inserção da frase
 st.subheader('Teste o modelo com diferentes discursos')
-DISCURSO = st.text_input('###### Faça comentários como se estivesse em uma publicação de rede social:')
+DISCURSO = st.text_input('Faça comentários como se estivesse em uma publicação de rede social:')
 
 #Definição de dicionário
 palavra_posicao = {'ferrou': 0, 'foi': 1, 'acredito': 2, 'pensei': 3, 'fofo': 4, 'burros': 5, 'gentil': 6, 'perfeita': 7, 'ser': 8, 'bolsonaristas': 9, 'prefiro': 10, 
