@@ -14,7 +14,7 @@ from PIL import Image
 from sklearn.linear_model import LogisticRegression
 
 #Orientando visão
-st.markdown('*__Projeto em manutenção__*')
+st.markdown('*__Observação: para mais informações acerca do projeto, clique na seta no canto esquerdo superior da tela__*')
 st.markdown(' ')
 
 #Informações em sidebar
@@ -24,7 +24,6 @@ st.sidebar.subheader('Bruno Rodrigues Carloto')
 st.sidebar.markdown('Cientista de dados')
 st.sidebar.markdown('#### Projeto de portfólio de Ciência de Dados')
 st.sidebar.markdown('Em breve haverá artigo')
-st.sidebar.markdown(' ')
 
 #Criação de páginas
 st.sidebar.title('Menu')
