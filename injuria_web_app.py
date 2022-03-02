@@ -90,13 +90,13 @@ if pag == 'Experimentar o modelo':
 
     #Função para vetorização de discursos
     def vetorizacao(texto):
-    vetor = [0] * 367
-    for token in texto.split():
-    token = token.lower()
-    if token in palavra_posicao:
-        posicao = palavra_posicao[token]
+      vetor = [0] * 367
+      for token in texto.split():
+      token = token.lower()
+      if token in palavra_posicao:
+          posicao = palavra_posicao[token]
           vetor[posicao] += 1
-    return vetor
+      return vetor
          
     #Importação do modelo
     with open('identificador_logistico.pkl', 'rb') as file:
