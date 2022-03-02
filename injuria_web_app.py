@@ -31,10 +31,10 @@ st.sidebar.markdown('#### Menu')
 pag = st.sidebar.selectbox('Selecione a página:', ['Experimentar o modelo', 'Sobre o modelo']
 
 #Redes sociais
-st.sidebar.markdown("Redes Sociais :")
-st.sidebar.markdown("- [Linkedin](https://www.linkedin.com/in/bruno-rodrigues-carloto)")
-st.sidebar.markdown("- [Medium](https://br-cienciadedados.medium.com)")
-st.sidebar.markdown("- [Github](https://github.com/brunnosjob)")
+st.sidebar.write("Redes Sociais :")
+st.sidebar.write("- [Linkedin](https://www.linkedin.com/in/bruno-rodrigues-carloto)")
+st.sidebar.write("- [Medium](https://br-cienciadedados.medium.com)")
+st.sidebar.write("- [Github](https://github.com/brunnosjob)")
 
 #Desenvolvimento das páginas
 if pag == 'Experimentar o modelo':
