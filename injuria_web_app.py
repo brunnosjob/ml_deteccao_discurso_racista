@@ -161,4 +161,7 @@ elif pag == 'Sobre os crimes':
     
     O que diferencia os crimes é o direcionamento da conduta. Enquanto a injúria racial é a ofensa direcionada a um indivíduo especifico, 
     o crime de racismo é a ofensa contra uma coletividade, por exemplo, toda uma raça ou etnia.
+    
+    
+    Agradecimentos a bacharelanda em Direito, Misma Kelly Carloto Rodrigues, que auxilou com a devida exposição das leis.
     ''')
