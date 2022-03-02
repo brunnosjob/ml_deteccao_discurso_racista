@@ -58,9 +58,48 @@ religião e procedência nacional, ampliando a proteção para vários tipos de 
 st.subheader('Teste o modelo com diferentes discursos')
 DISCURSO = st.text_input('_Faça comentários como se estivesse em uma publicação de rede social:_')
 
+#Definição de dicionário
+palavra_posicao = {'ferrou': 0, 'foi': 1, 'acredito': 2, 'pensei': 3, 'fofo': 4, 'burros': 5, 'gentil': 6, 'perfeita': 7, 'ser': 8, 'bolsonaristas': 9, 'prefiro': 10, 
+                   'volta': 11, 'tinha': 12, 'burro': 13, 'dura': 14, 'amor': 15, 'no': 16, 'chineses': 17, 'triste': 18, 'sua': 19, 'isso': 20, 
+                   'idiota': 21, 'sai': 22, 'ele': 23, 'porcos': 24, 'coitado': 25, 'legal': 26, 'pássaro': 27, 'até': 28, 'jamais': 29, 'besta': 30,
+                   'deveriam': 31, 'muito': 32, 'deles': 33, 'leal': 34, 'deve': 35, 'índia': 36, 'deixa': 37, 'da': 38, 'lamentável': 39, 'sexy': 40,
+                   'uau': 41, 'aos': 42, 'veio': 43, 'dele': 44, 'ela': 45, 'baitola': 46, 'são': 47, 'conversei': 48, 'não': 49, 'europeu': 50,
+                   'liberte-se': 51, 'esquerdistas': 52, 'branca': 53, 'morressem': 54, 'quer': 55, 'hitler': 56, 'fogo': 57, 'superiores': 58, 'ximpanzé': 59, 'imbecil': 60, 
+                   'prevalecer': 61, 'mate': 62, 'outro': 63, 'embora': 64, 'o': 65, 'falo': 66, 'só': 67, 'essa': 68, 'povo': 69, 'petistas': 70,
+                   'patamar': 71, 'cara': 72, 'liberte': 73, 'casarei': 74, 'falou': 75, 'complexo': 76, 'aí': 77, 'cai': 78, 'maldição': 79, 'vacilão': 80, 
+                   'eu': 81, 'de': 82, 'árabes': 83, 'coisa': 84, 'caso': 85, 'devem': 86, 'verme': 87, 'expulsar': 88, 'faz': 89, 'as': 90, 
+                   'mulher': 91, 'menina': 92, 'escravidão': 93, 'índio': 94, 'judeus': 95, 'japonesa': 96, 'africano': 97, 'brasil': 98, 'detesto': 99, 'nível': 100, 
+                   'humano': 101, 'inteligentes': 102, 'vem': 103, 'tem': 104, 'esse': 105, 'crentes': 106, 'morra': 107, 'puta': 108, 'uma': 109, 'doente': 110, 
+                   'longe': 111, 'manda': 112, 'correr': 113, 'fosse': 114, 'gente': 115, 'nojenta': 116, 'japonês': 117, 'caminho': 118, 'desgraça': 119, 'melhores': 120,
+                   'traidor': 121, 'matems': 122, 'fome': 123, 'vida': 124, 'palhaço': 125, 'fossem': 126, 'lindos': 127, 'sociedade': 128, 'escravizado': 129, 'pilantra': 130, 
+                   'latinoamericano': 131, 'natureza': 132, 'nadar': 133, 'gostei': 134, 'inferno': 135, 'mataria': 136, 'latinoamericanos': 137, 'é': 138, 'mim': 139, 'bons': 140,
+                   'africanos': 141, 'fedorento': 142, 'perfeitas': 143, 'feio': 144, 'real': 145, 'fora': 146, 'matem': 147, 'estivesse': 148, 'cortar': 149, 'cabeça': 150, 
+                   'zika': 151, 'eita': 152, 'asiáticos': 153, 'nascer': 154, 'tão': 155, 'inferior': 156, 'grande': 157, 'daqui': 158, 'narigudo': 159, 'jogar': 160, 
+                   'índios': 161, 'judaica': 162, 'branquelos': 163, 'namoro': 164, 'foda': 165, 'sou': 166, 'delas': 167, 'mundo': 168, 'comigo': 169, 'nunca': 170, 
+                   'mandar': 171, 'forte': 172, 'frios': 173, 'desse': 174, 'vivem': 175, 'perfeito': 176, 'vive': 177, 'quem': 178, 'olha': 179, 'disso': 180, 
+                   'pessoa': 181, 'loira': 182, 'ladrões': 183, 'malditos': 184, 'presidente': 185, 'que': 186, 'toda': 187, 'feia': 188, 'porco': 189, 'judeu': 190, 
+                   'queria': 191, 'preta': 192, 'maldito': 193, 'vidas': 194, 'queimar': 195, 'maluco': 196, 'lindo': 197, 'todas': 198, 'atear': 199, 'europa': 200,
+                   'comer': 201, 'abençoados': 202, 'neles': 203, 'covarde': 204, 'paraíso': 205, 'orgulho': 206, 'brancos': 207, 'vai': 208, 'nosso': 209, 'podre': 210, 
+                   'senzalado': 211, 'fechados': 212, 'esperto': 213, 'pega': 214, 'liberta': 215, 'amigo': 216, 'alvo': 217, 'pegou': 218, 'cores': 219, 'odeio': 220, 
+                   'dessa': 221, 'difícil': 222, 'ideia': 223, 'te': 224, 'crente': 225, 'salvos': 226, 'inteligente': 227, 'bandido': 228, 'para': 229, 'seu': 230,
+                   'morrer': 231, 'escravo': 232, 'preto': 233, 'senzala': 234, 'judeos': 235, 'bênção': 236, 'filha': 237, 'mais': 238, 'amar': 239, 'pretos': 240,
+                   'macaco': 241, 'pele': 242, 'faça': 243, 'bomba': 244, 'inútil': 245, 'vermelho': 246, 'inferiores': 247, 'está': 248, 'pra': 249, 'nem': 250, 
+                   'europeus': 251, 'deveria': 252, 'matar': 253, 'tirem': 254, 'fofa': 255, 'assassinos': 256, 'louca': 257, 'feios': 258, 'merece': 259, 'os': 260, 
+                   'longa': 261, 'sorte': 262, 'assassino': 263, 'menino': 264, 'alguém': 265, 'na': 266, 'negros': 267, 'japão': 268, 'por': 269, 'burra': 270, 
+                   'pobre': 271, 'anta': 272, 'se': 273, 'viado': 274, 'áfrica': 275, 'qualquer': 276, 'pretas': 277, 'ontem': 278, 'quero': 279, 'devemos': 280,
+                   'fracos': 281, 'demais': 282, 'feiosa': 283, 'negras': 284, 'vi': 285, 'alguns': 286, 'branco': 287, 'viver': 288, 'língua': 289, 'voce': 290,
+                   'hoje': 291, 'me': 292, 'feioso': 293, 'sujeito': 294, 'seria': 295, 'maravilhosa': 296, 'contrato': 297, 'banana': 298, 'aquele': 299, 'sei': 300, 
+                   'macaca': 301, 'miserável': 302, 'existir': 303, 'árabe': 304, 'um': 305, 'importam': 306, 'merecem': 307, 'louco': 308, 'pro': 309, 'a': 310, 
+                   'ridículo': 311, 'coração': 312, 'leva': 313, 'ladrão': 314, 'nos': 315, 'ótimo': 316, 'tempo': 317, 'seja': 318, 'antinegro': 319, 'honesto': 320,
+                   'tudo': 321, 'calorosos': 322, 'comeu': 323, 'gato': 324, 'mal': 325, 'mercem': 326, 'cafajeste': 327, 'safado': 328, 'do': 329, 'derrubem': 330,
+                   'linda': 331, 'esses': 332, 'amo': 333, 'eles': 334, 'ridícula': 335, 'bombril': 336, 'indiano': 337, 'turco': 338, 'gosta': 339, 'cabelo': 340, 
+                   'aqui': 341, 'besteira': 342, 'sincera': 343, 'americano': 344, 'neve': 345, 'perfeitos': 346, 'filho': 347, 'parece': 348, 'você': 349, 'atividade': 350,
+                   'nojento': 351, 'antijudeu': 352, 'gosto': 353, 'maldoso': 354, 'negra': 355, 'vou': 356, 'dormindo': 357, 'macumbeiro': 358, 'morram': 359, 'negro': 360,
+                   'morte': 361, 'todo': 362, 'arrombado': 363, 'desgraçado': 364, 'com': 365, 'preguiçoso': 366}
+
 #Função para vetorização de discursos
 def vetorizacao(texto):
-    vetor = [0] * total_de_palavras
+    vetor = [0] * 367
     for token in texto.split():
         token = token.lower()
         if token in palavra_posicao:
