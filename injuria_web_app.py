@@ -27,8 +27,7 @@ st.sidebar.markdown("- [Github](https://github.com/brunnosjob)")
 
 
 #Cabeçalho
-st.subheader('Detecção de crime de injúria racial e/ou de racismo')
-st.subheader(' ')
+st.header('Detecção de crime de injúria racial e/ou de racismo')
 
 #Informe
 #st.write('''
