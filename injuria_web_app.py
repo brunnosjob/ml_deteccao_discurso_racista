@@ -96,7 +96,7 @@ if pag == 'Experimentar o modelo':
           if token in palavra_posicao:
               posicao = palavra_posicao[token]
               vetor[posicao] += 1
-          return vetor
+      return vetor
          
     #Importação do modelo
     with open('identificador_logistico.pkl', 'rb') as file:
