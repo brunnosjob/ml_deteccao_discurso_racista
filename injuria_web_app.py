@@ -31,13 +31,13 @@ st.subheader('Detecção de crime de injúria racial e/ou de racismo')
 st.subheader(' ')
 
 #Informe
-st.write('''
-As redes sociais, como Instagram, se mostram um espaço em que o discurso de ódio é encorajado pela distância.
-Contudo, o fato é que, embora haja distância, o criminoso deve ser justamente punido.
-
-Sendo assim, essa aplicação web demonstra a utilidade de um modelo de machine learning para auxiliar com a 
-identificação de crimes de injúria racial e/ou de racismo em comentários de redes sociais.
-''')
+#st.write('''
+#As redes sociais, como Instagram, se mostram um espaço em que o discurso de ódio é encorajado pela distância.
+#Contudo, o fato é que, embora haja distância, o criminoso deve ser justamente punido.
+#
+#Sendo assim, essa aplicação web demonstra a utilidade de um modelo de machine learning para auxiliar com a 
+#identificação de crimes de injúria racial e/ou de racismo em comentários de redes sociais.
+#''')
 
 #Inserção da frase
 st.subheader('Teste o modelo com diferentes discursos')
