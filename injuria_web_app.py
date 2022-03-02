@@ -126,7 +126,7 @@ elif pag == 'Sobre o modelo':
          
       st.subheader('Sobre o modelo')
       st.markdown('''
-      As redes sociais, como Instagram, Twiter e Facebook, se mostram um espaço em que o discurso de ódio é encorajado pela distância.
+      As redes sociais, como Instagram, Twitter e Facebook, se mostram um espaço em que o discurso de ódio é encorajado pela distância.
       Contudo, o fato é que, embora haja distância, o criminoso deve ser justamente punido.
 
       Sendo assim, desenvolvi esse modelo de machine learning (software inteligente artificialmente), o qual tem como objetivo identificar crimes de injúria racial e/ou de racismo em comentários de redes sociais.
