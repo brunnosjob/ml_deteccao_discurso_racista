@@ -125,7 +125,7 @@ if pag == 'Experimentar o modelo':
     
     #### Observação:
     
-    Para compreensão acerca do aprendizado do modelo e suas limitações, navegue para a página __Sobre o modelo__.
+    Para compreensão acerca do aprendizado do modelo e suas limitações, navegue para a página __Sobre o modelo__ e leia o tópico __Sobre o treinamento do modelo__.
     ''')
                            
 elif pag == 'Sobre o modelo':
