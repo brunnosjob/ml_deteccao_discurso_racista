@@ -14,7 +14,7 @@ from PIL import Image
 from sklearn.linear_model import LogisticRegression
 
 #Informações em sidebar
-foto = Image.open('bruno.jfif')
+foto = Image.open('brn.png')
 st.sidebar.image(foto, use_column_width=True)
 st.sidebar.subheader('Projeto de portfólio de Ciência de Dados')
 st.sidebar.markdown('Em breve haverá artigo')
