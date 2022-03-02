@@ -100,7 +100,7 @@ if pag == 'Experimentar o modelo':
          
     #Importação do modelo
     with open('identificador_logistico.pkl', 'rb') as file:
-    modelo = pickle.load(file)
+        modelo = pickle.load(file)
          
     #Programa para classificação do discurso
     vetor = vetorizacao(DISCURSO)
