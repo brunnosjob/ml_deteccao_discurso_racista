@@ -120,6 +120,11 @@ elif pag == 'Sobre o modelo':
          
       Para o desenvolvimento de um modelo mais preciso na identificação, o trabalho requer um maior corpus (conjunto de dados textuais/linguísticos), com diversidade de discurso e com dados de qualidade, 
       condizentes ao desenvolvimento do modelo.
+      
+      #### Limitações do presente modelo
+      
+      O modelo desenvolvido é para projeto de portfólio. Serve como um protótipo para demonstração de conhecimento. Suas limitações residem no corpus usado. A quantidade de exemplos 
+      inseridos na aprendizagem do modelo é limitada diante da diversidade de discursos criminosos que se enquadram como crimes de injúria racial ou de racismo.
          ''')
         
 elif pag == 'Sobre os crimes':
