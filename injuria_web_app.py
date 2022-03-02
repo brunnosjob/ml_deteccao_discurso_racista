@@ -45,6 +45,7 @@ if pag == 'Experimentar o modelo':
                O teste do modelo não compromete sua pessoa. Você pode simular discursos racistas ou não racistas para experimentar a eficiência do modelo.
                ''')
     #Inserção da frase
+    st.markdown('__O modelo está sendo aperfeiçoamento__')
     st.subheader('Teste o modelo com diferentes discursos')
     st.markdown('''
     __Exemplos__
