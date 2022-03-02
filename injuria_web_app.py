@@ -55,7 +55,7 @@ if pag == 'Experimentar o modelo':
     - *"Quero comer sushi"*;
     - *"Negra maravilhosa"*
     
-    Use sua criatividade
+    Use sua criatividade e considere que o modelo somente conhece 378 palavras.
     ''')
     DISCURSO = st.text_input('Faça comentários como se estivesse em uma publicação de rede social:')
 
