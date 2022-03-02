@@ -38,25 +38,11 @@ Contudo, o fato é que, embora haja distância, o criminoso deve ser justamente 
 
 Sendo assim, essa aplicação web demonstra a utilidade de um modelo de machine learning para auxiliar com a 
 identificação de crimes de injúria racial e/ou de racismo em comentários de redes sociais.
-
-#### Injúria racial
-
-O crime de injúria racial está inserido no capítulo dos crimes contra a honra,
-previsto no parágrafo 3º do artigo 140 do Código Penal. O crime é caracterizado quando há ofensa à dignidade de alguém, 
-com base em elementos referentes à sua raça, cor, etnia, religião, idade ou deficiência. 
-Nesta hipótese, a pena pode ir de 1 a 3 anos de reclusão. Esse crime não se confunde com o crime de racismo.
-
-#### Racismo
-
-Os crimes de racismo estão previstos na Lei 7.716/1989, conhecida como Lei do Racismo.
-Essa lei foi elaborada para regulamentar a punição de crimes resultantes de preconceito de raça ou de cor. 
-Todavia a Lei nº 9.459/13 acrescentou à referida lei os termos etnia, 
-religião e procedência nacional, ampliando a proteção para vários tipos de intolerância.
 ''')
 
 #Inserção da frase
 st.subheader('Teste o modelo com diferentes discursos')
-DISCURSO = st.text_input('__Faça comentários como se estivesse em uma publicação de rede social:__')
+DISCURSO = st.text_input('###### Faça comentários como se estivesse em uma publicação de rede social:')
 
 #Definição de dicionário
 palavra_posicao = {'ferrou': 0, 'foi': 1, 'acredito': 2, 'pensei': 3, 'fofo': 4, 'burros': 5, 'gentil': 6, 'perfeita': 7, 'ser': 8, 'bolsonaristas': 9, 'prefiro': 10, 
