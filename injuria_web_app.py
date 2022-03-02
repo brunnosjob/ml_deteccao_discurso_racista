@@ -13,6 +13,10 @@ import pickle
 from PIL import Image
 from sklearn.linear_model import LogisticRegression
 
+#Orientando visão
+st.markdown('*__Projeto em manutenção__*')
+st.markdown(' ')
+
 #Informações em sidebar
 foto = Image.open('brn.png')
 st.sidebar.image(foto, use_column_width=True)
