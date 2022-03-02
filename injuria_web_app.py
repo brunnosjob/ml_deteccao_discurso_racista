@@ -27,8 +27,9 @@ st.sidebar.markdown('Em breve haverá artigo')
 st.sidebar.markdown(' ')
 
 #Criação de páginas
-st.sidebar.markdown('#### Menu')
-pag = st.sidebar.selectbox('Selecione a página:', ['Experimentar o modelo', 'Sobre o modelo']                      
+st.sidebar.title('Menu')
+pag = st.sidebar.selectbox('Selecione a página:', ['Experimentar o modelo', 'Sobre o modelo']
+st.markdown(' ')
 
 st.sidebar.markdown("Redes Sociais :")
 st.sidebar.markdown("- [Linkedin](https://www.linkedin.com/in/bruno-rodrigues-carloto)")
@@ -38,19 +39,19 @@ st.sidebar.markdown("- [Github](https://github.com/brunnosjob)")
 
 #Desenvolvimento das páginas
 if pag == 'Experimentar o modelo':
-         #Cabeçalho
-         st.subheader('Detecção de crime de injúria racial e/ou de racismo')
-         st.write('''
-                  O presente modelo de machine learning serve para detecção de crimes de injúria racial e/ou de racismo cometidos em comentários de rede social.
-                  O teste do modelo não compromete sua pessoa. Você pode simular discursos racistas ou não racistas para experimentar a eficiência do modelo.
-                  ''')
+    #Cabeçalho
+    st.subheader('Detecção de crime de injúria racial e/ou de racismo')
+    st.write('''
+               O presente modelo de machine learning serve para detecção de crimes de injúria racial e/ou de racismo cometidos em comentários de rede social.
+               O teste do modelo não compromete sua pessoa. Você pode simular discursos racistas ou não racistas para experimentar a eficiência do modelo.
+               ''')
 
-         #Inserção da frase
-         st.subheader('Teste o modelo com diferentes discursos')
-         DISCURSO = st.text_input('Faça comentários como se estivesse em uma publicação de rede social:')
+      #Inserção da frase
+      st.subheader('Teste o modelo com diferentes discursos')
+      DISCURSO = st.text_input('Faça comentários como se estivesse em uma publicação de rede social:')
 
-         #Definição de dicionário
-         palavra_posicao = {'ferrou': 0, 'foi': 1, 'acredito': 2, 'pensei': 3, 'fofo': 4, 'burros': 5, 'gentil': 6, 'perfeita': 7, 'ser': 8, 'bolsonaristas': 9, 'prefiro': 10, 
+      #Definição de dicionário
+      palavra_posicao = {'ferrou': 0, 'foi': 1, 'acredito': 2, 'pensei': 3, 'fofo': 4, 'burros': 5, 'gentil': 6, 'perfeita': 7, 'ser': 8, 'bolsonaristas': 9, 'prefiro': 10, 
                             'volta': 11, 'tinha': 12, 'burro': 13, 'dura': 14, 'amor': 15, 'no': 16, 'chineses': 17, 'triste': 18, 'sua': 19, 'isso': 20, 
                             'idiota': 21, 'sai': 22, 'ele': 23, 'porcos': 24, 'coitado': 25, 'legal': 26, 'pássaro': 27, 'até': 28, 'jamais': 29, 'besta': 30,
                            'deveriam': 31, 'muito': 32, 'deles': 33, 'leal': 34, 'deve': 35, 'índia': 36, 'deixa': 37, 'da': 38, 'lamentável': 39, 'sexy': 40,
@@ -88,55 +89,55 @@ if pag == 'Experimentar o modelo':
                            'nojento': 351, 'antijudeu': 352, 'gosto': 353, 'maldoso': 354, 'negra': 355, 'vou': 356, 'dormindo': 357, 'macumbeiro': 358, 'morram': 359, 'negro': 360,
                            'morte': 361, 'todo': 362, 'arrombado': 363, 'desgraçado': 364, 'com': 365, 'preguiçoso': 366}
 
-         #Função para vetorização de discursos
-         def vetorizacao(texto):
-         vetor = [0] * 367
-         for token in texto.split():
-         token = token.lower()
-         if token in palavra_posicao:
-                     posicao = palavra_posicao[token]
-                     vetor[posicao] += 1
-         return vetor
+      #Função para vetorização de discursos
+      def vetorizacao(texto):
+      vetor = [0] * 367
+      for token in texto.split():
+      token = token.lower()
+      if token in palavra_posicao:
+          posicao = palavra_posicao[token]
+          vetor[posicao] += 1
+      return vetor
          
-         #Importação do modelo
-         with open('identificador_logistico.pkl', 'rb') as file:
-         modelo = pickle.load(file)
+      #Importação do modelo
+      with open('identificador_logistico.pkl', 'rb') as file:
+      modelo = pickle.load(file)
          
-         #Programa para classificação do discurso
-         vetor = vetorizacao(DISCURSO)
-         vetor = np.array([vetor])
-         classificacao = modelo.predict(vetor)
-         if classificacao == 1:
-                  st.write("A fala '{}' É UM CRIME de injúria racial ou racismo.".format(DISCURSO))
-         elif classificacao == 0:
-                  st.write("A fala '{}' NÃO é um crime de injúria racial ou racismo.".format(DISCURSO))
+      #Programa para classificação do discurso
+      vetor = vetorizacao(DISCURSO)
+      vetor = np.array([vetor])
+      classificacao = modelo.predict(vetor)
+      if classificacao == 1:
+          st.write("A fala '{}' É UM CRIME de injúria racial ou racismo.".format(DISCURSO))
+      elif classificacao == 0:
+          st.write("A fala '{}' NÃO é um crime de injúria racial ou racismo.".format(DISCURSO))
                            
 elif pag == 'Sobre o modelo':
          
-         st.subheader('Sobre o modelo')
-         st.markdown('''
-         As redes sociais, como Instagram, Twiter e Facebook, se mostram um espaço em que o discurso de ódio é encorajado pela distância.
-         Contudo, o fato é que, embora haja distância, o criminoso deve ser justamente punido.
+      st.subheader('Sobre o modelo')
+      st.markdown('''
+      As redes sociais, como Instagram, Twiter e Facebook, se mostram um espaço em que o discurso de ódio é encorajado pela distância.
+      Contudo, o fato é que, embora haja distância, o criminoso deve ser justamente punido.
 
-         Sendo assim, desenvolvi esse modelo de machine learning (software inteligente artificialmente), o qual tem como objetivo identificar crimes de injúria racial e/ou de racismo em comentários de redes sociais.
+      Sendo assim, desenvolvi esse modelo de machine learning (software inteligente artificialmente), o qual tem como objetivo identificar crimes de injúria racial e/ou de racismo em comentários de redes sociais.
          
-         Para desenvolvimento do modelo, utilizei técnicas de Ciência de Dados e Processamento de Linguagem Natural.
+      Para desenvolvimento do modelo, utilizei técnicas de Ciência de Dados e Processamento de Linguagem Natural.
          
-         A presente aplicação web (interface em que está o modelo de machine learning) serve para interação pública, como experiência pessoal. 
-         A partir da experimentação, o público pode compreender a utilidade de um modelo de machine learning para auxiliar com a 
-         identificação de crimes de injúria racial e/ou de racismo em comentários de redes sociais.
+      A presente aplicação web (interface em que está o modelo de machine learning) serve para interação pública, como experiência pessoal. 
+      A partir da experimentação, o público pode compreender a utilidade de um modelo de machine learning para auxiliar com a 
+      identificação de crimes de injúria racial e/ou de racismo em comentários de redes sociais.
+      
+      #### Sobre o treinamento do modelo
          
-         #### Sobre o treinamento do modelo
+      Como produto de machine learning, o modelo foi desenvolvido a partir de supervisão, ou seja, diferentes discursos, racistas e não racistas, foram passados ao modelo, para 
+      treinamento, e indicados como sendo ou não sendo racistas. Isso é semelhante a ensinar a uma criança o que é um cachorro, usando a técnica de apontar para o animal e dizer qual 
+      animal é. Quanto mais a criança ver diferentes tipos de cachorro e os demais animais, mais ela conseguirá identificar os cachorros, com suas particularidades de cor, raça e tamanho, 
+      além de compreender o que não é um cachorro.
          
-         Como produto de machine learning, o modelo foi desenvolvido a partir de supervisão, ou seja, diferentes discursos, racistas e não racistas, foram passados ao modelo, para 
-         treinamento, e indicados como sendo ou não sendo racistas. Isso é semelhante a ensinar a uma criança o que é um cachorro, usando a técnica de apontar para o animal e dizer qual 
-         animal é. Quanto mais a criança ver diferentes tipos de cachorro e os demais animais, mais ela conseguirá identificar os cachorros, com suas particularidades de cor, raça e tamanho, 
-         além de compreender o que não é um cachorro.
+      As limitações do modelo residem em seu aprendizado. A língua, enquanto linguagem humana, é um fenômeno extremamente versátil e complexo. Há uma diversidade de modos de se falar a mesma coisa, 
+      sendo assim, o modelo não viu todas as possibilidades de discurso racista e não racista. Portanto, há discursos racistas que podem não ser identificados, assim como, podem haver 
+      discursos não racistas entendidos pelo modelo como racistas.
          
-         As limitações do modelo residem em seu aprendizado. A língua, enquanto linguagem humana, é um fenômeno extremamente versátil e complexo. Há uma diversidade de modos de se falar a mesma coisa, 
-         sendo assim, o modelo não viu todas as possibilidades de discurso racista e não racista. Portanto, há discursos racistas que podem não ser identificados, assim como, podem haver 
-         discursos não racistas entendidos pelo modelo como racistas.
-         
-         Para o desenvolvimento de um modelo mais preciso na identificação, o trabalho requer um maior corpus (conjunto de dados textuais/linguísticos), com diversidade de discurso e com dados de qualidade, 
-         condizentes ao desenvolvimento do modelo.
+      Para o desenvolvimento de um modelo mais preciso na identificação, o trabalho requer um maior corpus (conjunto de dados textuais/linguísticos), com diversidade de discurso e com dados de qualidade, 
+      condizentes ao desenvolvimento do modelo.
          ''')
