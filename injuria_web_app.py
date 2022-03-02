@@ -55,19 +55,29 @@ religião e procedência nacional, ampliando a proteção para vários tipos de 
 ''')
 
 #Inserção da frase
-st.write('Teste o modelo com diferentes discursos')
-DISCURSO = st.text_input('Faça comentários como se estivesse em uma publicação de rede social:')
+st.subheader('Teste o modelo com diferentes discursos')
+DISCURSO = st.text_input('_Faça comentários como se estivesse em uma publicação de rede social:_')
+
+#Função para vetorização de discursos
+def vetorizacao(texto):
+    vetor = [0] * total_de_palavras
+    for token in texto.split():
+        token = token.lower()
+        if token in palavra_posicao:
+            posicao = palavra_posicao[token]
+            vetor[posicao] += 1
+    return vetor
 
 #Importação do modelo
-with open('identificador_injuria_racismo_versao_logistico_1.pkl', 'rb') as file:
-    vetorizador, modelo = pickle.load(file)
+with open('identificador_injuria_racismo_versao_logistico_2.pkl', 'rb') as file:
+    modelo = pickle.load(file)
     
 #Aplicação do modelo em lógica
 #Testando o modelo
 DISCURSO = 'O Lula odeia os negros'
 
 #Programa para classificação do discurso
-vetor = vetorizador(DISCURSO)
+vetor = vetorizacao(DISCURSO)
 vetor = np.array([vetor])
 classificacao = modelo.predict(vetor)
 if classificacao == 1:
