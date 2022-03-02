@@ -109,7 +109,7 @@ def vetorizacao(texto):
 
 #Importação do modelo
 with open('identificador_injuria_racismo_versao_logistico_2.pkl', 'rb') as file:
-    modelo = pickle.load(file)
+    modelo_logistico = pickle.load(file)
     
 #Aplicação do modelo em lógica
 #Testando o modelo
@@ -118,7 +118,7 @@ DISCURSO = 'O Lula odeia os negros'
 #Programa para classificação do discurso
 vetor = vetorizacao(DISCURSO)
 vetor = np.array([vetor])
-classificacao = modelo.predict(vetor)
+classificacao = modelo_logistico.predict(vetor)
 if classificacao == 1:
     print("A fala '{}' É UM CRIME de injúria racial ou racismo.".format(DISCURSO))
 else:
