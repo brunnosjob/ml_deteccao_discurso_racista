@@ -46,6 +46,16 @@ if pag == 'Experimentar o modelo':
                ''')
     #Inserção da frase
     st.subheader('Teste o modelo com diferentes discursos')
+    st.markdown('''
+    __Exemplos__
+    
+    - *"Negro maldito"*;
+    - *"Os judeus devem morrer"*;
+    - *"Quero comer sushi"*;
+    - *"Negra maravilhosa"*
+    
+    Use sua criatividade
+    ''')
     DISCURSO = st.text_input('Faça comentários como se estivesse em uma publicação de rede social:')
 
     #Definição de dicionário
