@@ -16,12 +16,12 @@ from sklearn.linear_model import LogisticRegression
 #Informações em sidebar
 foto = Image.open('brn.png')
 st.sidebar.image(foto, use_column_width=True)
-st.sidebar.subheader('Projeto de portfólio de Ciência de Dados')
+st.sidebar.subheader('Bruno Rodrigues Carloto')
+st.sidebar.markdown('#### Projeto de portfólio de Ciência de Dados')
 st.sidebar.markdown('Em breve haverá artigo')
 st.sidebar.markdown(' ')
 
 #Redes sociais
-st.sidebar.markdown('Feito por : Bruno Rodrigues Carloto')
 st.sidebar.markdown("Redes Sociais :")
 st.sidebar.markdown("- [Linkedin](https://www.linkedin.com/in/bruno-rodrigues-carloto)")
 st.sidebar.markdown("- [Medium](https://br-cienciadedados.medium.com)")
