@@ -108,7 +108,7 @@ def vetorizacao(texto):
     return vetor
 
 #Importação do modelo
-with open('identificador_logistico.pkl.pkl', 'rb') as file:
+with open('identificador_logistico.pkl', 'rb') as file:
     modelo = pickle.load(file)
     
 #Aplicação do modelo em lógica
