@@ -163,6 +163,8 @@ elif pag == 'Sobre os crimes':
     o crime de racismo é a ofensa contra uma coletividade, por exemplo, toda uma raça ou etnia.
     
     
+    
+    
     __Agradecimentos__
     
     Agradecimentos a bacharelanda em Direito, Misma Kelly Marcílio Carloto Rodrigues, que auxilou com a devida exposição das leis.
