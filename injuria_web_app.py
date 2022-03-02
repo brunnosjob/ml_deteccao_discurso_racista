@@ -39,7 +39,7 @@ st.sidebar.markdown("- [Github](https://github.com/brunnosjob)")
 #Desenvolvimento das páginas
 if pag == 'Experimentar o modelo':
     #Cabeçalho
-    st.markdown('__O modelo está sendo aperfeiçoamento__')
+    st.markdown('__O modelo está sendo aperfeiçoado__')
     st.subheader('Detecção de crime de injúria racial e/ou de racismo em discurso')
     st.write('''
                O presente modelo de machine learning serve para detecção de crimes de injúria racial e/ou de racismo cometidos em comentários de rede social.
@@ -81,9 +81,9 @@ if pag == 'Experimentar o modelo':
     vetor = np.array([vetor])
     classificacao = modelo.predict(vetor)
     if classificacao == 1:
-        st.write("A fala '{}' É SUSPEITA DE COMETER CRIME de injúria racial ou racismo.".format(DISCURSO))
+        st.write("O discurso '{}' VIOLA AS LEIS de injúria racial ou racismo.".format(DISCURSO))
     elif classificacao == 0:
-        st.write("A fala '{}' NÃO É SUSPEITA DE COMETEER CRIME de injúria racial ou racismo.".format(DISCURSO))
+        st.write("O discurso '{}' NÃO VIOLA AS LEIS de injúria racial ou racismo.".format(DISCURSO))
         
     st.markdown('''
     __Analise seu discurso e compare com a resposta/compreensão do modelo__
