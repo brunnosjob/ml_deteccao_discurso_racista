@@ -52,7 +52,8 @@ if pag == 'Experimentar o modelo':
     - *"Quero comer sushi"*;
     - *"Negra maravilhosa"*
     
-    Use sua criatividade e considere que o modelo somente conhece 379 palavras e em torno de 500 discursos, o que é pouco para as inúmeras possibilidades de se fazer discurso criminoso.
+    Use sua criatividade e considere que o modelo somente conhece 379 palavras e em torno de 500 discursos, 
+    o que é pouco, tendo em vista as inúmeras possibilidades de se construir um discurso criminoso ou não criminoso.
     ''')
     DISCURSO = st.text_input('Faça comentários como se estivesse em uma publicação de rede social:')
 
@@ -78,9 +79,9 @@ if pag == 'Experimentar o modelo':
     vetor = np.array([vetor])
     classificacao = modelo.predict(vetor)
     if classificacao == 1:
-        st.write("O discurso '{}' VIOLA AS LEIS de injúria racial ou racismo.".format(DISCURSO))
+        st.write("O discurso '{}' VIOLA A LEI de injúria racial ou de racismo.".format(DISCURSO))
     elif classificacao == 0:
-        st.write("O discurso '{}' NÃO VIOLA AS LEIS de injúria racial ou racismo.".format(DISCURSO))
+        st.write("O discurso '{}' NÃO VIOLA A LEI de injúria racial ou de racismo.".format(DISCURSO))
         
   
                            
