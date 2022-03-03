@@ -44,7 +44,7 @@ if pag == 'Experimentar o modelo':
     st.markdown('#### Detecção de crime de injúria racial e/ou de racismo em discurso')
     
     #Inserção da frase
-    st.smarkdown('#### Teste o modelo com diferentes discursos')
+    st.markdown('#### Teste o modelo com diferentes discursos')
     st.markdown('''
     __Exemplos__
     
