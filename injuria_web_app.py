@@ -40,10 +40,11 @@ st.sidebar.markdown("- [Github](https://github.com/brunnosjob)")
 if pag == 'Experimentar o modelo':
     #Cabeçalho
     st.markdown('__O modelo está sendo aperfeiçoado__')
-    st.subheader('Detecção de crime de injúria racial e/ou de racismo em discurso')
+    st.subheader('Simulador')
+    st.markdown('#### Detecção de crime de injúria racial e/ou de racismo em discurso')
     
     #Inserção da frase
-    st.subheader('Teste o modelo com diferentes discursos')
+    st.smarkdown('#### Teste o modelo com diferentes discursos')
     st.markdown('''
     __Exemplos__
     
