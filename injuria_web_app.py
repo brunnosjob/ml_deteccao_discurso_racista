@@ -72,7 +72,7 @@ if pag == 'Experimentar o modelo':
       return vetor
          
     #Importação do modelo
-    with open('identificador_multinomial.pkl', 'rb') as file:
+    with open('identificador_multinomial_versao_2.pkl', 'rb') as file:
         modelo = pickle.load(file)
          
     #Programa para classificação do discurso
