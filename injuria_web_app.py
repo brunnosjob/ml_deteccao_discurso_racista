@@ -23,7 +23,7 @@ st.sidebar.image(foto, use_column_width=True)
 st.sidebar.subheader('Bruno Rodrigues Carloto')
 st.sidebar.markdown('Cientista de dados')
 st.sidebar.markdown('#### Projeto de portfólio de Ciência de Dados')
-st.sidebar.markdown("- [Acesso ao artigo que registra o passo a passo do desenvolvimento do modelo](https://br-cienciadedados.medium.com/machine-learning-para-detec%C3%A7%C3%A3o-de-discurso-racista-parte-1-1b697673d4bc)")
+st.sidebar.markdown("- [Artigo com o passo a passo do desenvolvimento do modelo](https://br-cienciadedados.medium.com/machine-learning-para-detec%C3%A7%C3%A3o-de-discurso-racista-parte-1-1b697673d4bc)")
 
 #Criação de páginas
 st.sidebar.title('Menu')
