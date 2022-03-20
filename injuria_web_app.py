@@ -16,7 +16,7 @@ from PIL import Image
 from sklearn.linear_model import LogisticRegression
 
 #Orientando visão
-st.markdown('*__Observação: para mais informações acerca do projeto, clique na seta no canto esquerdo superior da tela__*')
+st.markdown('*__>>> Observação: para mais informações acerca do projeto, clique na seta no canto esquerdo superior da tela <<<__*')
 st.markdown(' ')
 
 #Informações em sidebar
