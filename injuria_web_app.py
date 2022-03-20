@@ -41,7 +41,7 @@ st.sidebar.markdown("- [Github](https://github.com/brunnosjob)")
 #Desenvolvimento das páginas
 if pag == 'Experimentar o modelo':
     #Cabeçalho
-    st.markdown('EM MANUTENÇÃO - ATUALIZANDO PARA NOVA VERSÃO')
+    st.markdown('__EM MANUTENÇÃO - ATUALIZANDO PARA NOVA VERSÃO__')
     st.markdown('__O modelo está sendo aperfeiçoado__')
     st.subheader('Simulador')
     st.markdown('#### Detecção de crime de injúria racial e/ou de racismo em discurso')
