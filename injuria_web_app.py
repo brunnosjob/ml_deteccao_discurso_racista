@@ -10,6 +10,7 @@ import streamlit as st
 import pickle
 import nltk
 import spacy
+python -m spacy download pt_core_news_sm
 
 #Importando algoritmo de machine learning
 from PIL import Image
