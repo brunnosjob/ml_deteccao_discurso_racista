@@ -8,6 +8,7 @@
 import numpy as np
 import streamlit as st
 import pickle
+import nltk
 
 #Importando algoritmo de machine learning
 from PIL import Image
