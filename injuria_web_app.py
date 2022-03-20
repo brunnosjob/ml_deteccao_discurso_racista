@@ -16,7 +16,7 @@ from PIL import Image
 from sklearn.linear_model import LogisticRegression
 
 #Orientando visão
-st.markdown('*__>>> Observação: para mais informações acerca do projeto, clique na seta no canto esquerdo superior da tela <<<__*')
+st.markdown('*__Observação: para mais informações acerca do projeto, clique na seta no canto esquerdo superior da tela__*')
 st.markdown(' ')
 
 #Informações em sidebar
@@ -41,7 +41,7 @@ st.sidebar.markdown("- [Github](https://github.com/brunnosjob)")
 #Desenvolvimento das páginas
 if pag == 'Experimentar o modelo':
     #Cabeçalho
-    st.markdown('__EM MANUTENÇÃO - ATUALIZANDO PARA NOVA VERSÃO__')
+    st.markdown('__>>> EM MANUTENÇÃO - ATUALIZANDO PARA NOVA VERSÃO__')
     st.markdown('__O modelo está sendo aperfeiçoado__')
     st.subheader('Simulador')
     st.markdown('#### Detecção de crime de injúria racial e/ou de racismo em discurso')
