@@ -11,6 +11,7 @@ import pickle
 import nltk
 import spacy
 from spacy.lang.pt import Portuguese
+from nltk.corpus import stopwords
 
 #Importando algoritmo de machine learning
 from PIL import Image
@@ -87,7 +88,7 @@ if pag == 'Experimentar o modelo':
 
     #Remoção de stopwords:
     sentenca_limpa = []
-    stpw = nltk.corpus.stopwords.words('portuguese')
+    stpw = stopwords.words('portuguese')
     for token in sentenca_sem_pontuacao:
         if str(token) not in stpw:
             sentenca_limpa.append(token)
