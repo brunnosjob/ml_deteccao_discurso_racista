@@ -47,8 +47,8 @@ if pag == 'Experimentar o modelo':
     #Cabeçalho
     st.markdown('__O modelo está sendo aperfeiçoado__')
     st.subheader('Simulador')
-    st.markdown('#### Detecção de crime de injúria racial e/ou de racismo em discurso')
     st.markdown('Modelo versão 2.0')
+    st.markdown('#### Detecção de crime de injúria racial e/ou de racismo em discurso')
     
     #Inserção da frase
     st.markdown('#### Teste o modelo com diferentes discursos')
