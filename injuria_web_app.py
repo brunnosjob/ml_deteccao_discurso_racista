@@ -6,13 +6,14 @@
 
 #Importando bibliotecas principais
 import numpy as np
-import streamlit as st
-import string
-import pickle
 import nltk
 import spacy
+import string
+import streamlit as st
+import pickle
+
+#Importando módulo
 from spacy.lang.pt import Portuguese
-from nltk.corpus import stopwords
 
 #Importando algoritmo de machine learning
 from PIL import Image
@@ -44,10 +45,10 @@ st.sidebar.markdown("- [Github](https://github.com/brunnosjob)")
 #Desenvolvimento das páginas
 if pag == 'Experimentar o modelo':
     #Cabeçalho
-    st.markdown('__>>> EM MANUTENÇÃO - ATUALIZANDO PARA NOVA VERSÃO__')
     st.markdown('__O modelo está sendo aperfeiçoado__')
     st.subheader('Simulador')
     st.markdown('#### Detecção de crime de injúria racial e/ou de racismo em discurso')
+    st.markdown('Modelo versão 2.0')
     
     #Inserção da frase
     st.markdown('#### Teste o modelo com diferentes discursos')
@@ -59,7 +60,7 @@ if pag == 'Experimentar o modelo':
     - *"Quero comer sushi"*;
     - *"Negra maravilhosa"*
     
-    Use sua criatividade e considere que o modelo somente conhece 379 palavras e em torno de 500 discursos, 
+    Use sua criatividade e considere que o modelo somente conhece 329 palavras e em torno de 500 discursos únicos, 
     o que é pouco, tendo em vista as inúmeras possibilidades de se construir um discurso criminoso ou não criminoso.
     ''')
     DISCURSO = st.text_input('Faça comentários como se estivesse em uma publicação de rede social:')
@@ -133,7 +134,7 @@ elif pag == 'Sobre o modelo':
 
       Sendo assim, desenvolvi esse modelo de machine learning (software inteligente artificialmente), o qual tem como objetivo identificar crimes de injúria racial e/ou de racismo em comentários de redes sociais.
          
-      Para desenvolvimento do modelo, utilizei técnicas de Ciência de Dados e Processamento de Linguagem Natural.
+      Para desenvolvimento do modelo, utilizei técnicas de Ciência de Dados e Processamento de Linguagem Natural, como remoção de stopwords e lemmatização.
          
       A presente aplicação web (interface em que está o modelo de machine learning) serve para interação pública, como experiência pessoal. 
       A partir da experimentação, o público pode compreender a utilidade de um modelo de machine learning como auxiliador para
@@ -147,7 +148,7 @@ elif pag == 'Sobre o modelo':
       além de compreender o que não é um cachorro.
          
       As limitações do modelo residem em seu aprendizado. A língua, enquanto linguagem humana, é um fenômeno extremamente versátil e complexo. Há uma diversidade de modos de se falar a mesma coisa, 
-      sendo assim, o modelo não viu todas as possibilidades de discurso racista e não racista, havendo sido treinado com 379 palavras e cerca de 500 discursos. 
+      sendo assim, o modelo não viu todas as possibilidades, ou o suficiente, de discurso racista e não racista, havendo sido treinado com 329 palavras e cerca de 500 discursos. 
       Portanto, há discursos racistas que podem não ser identificados, assim como, podem haver 
       discursos não racistas entendidos pelo modelo como racistas.
          
@@ -156,7 +157,7 @@ elif pag == 'Sobre o modelo':
       
       #### Limitações do presente modelo
       
-      O modelo desenvolvido é para projeto de portfólio. Serve como um protótipo para demonstração de conhecimento. Suas limitações residem no corpus usado, o qual apresenta 379 
+      O modelo desenvolvido é para projeto de portfólio. Serve como um protótipo para demonstração de conhecimento. Suas limitações residem no corpus usado, o qual apresenta 329 
       palavras distintas e aproximadamente 500 discursos distintos.
       A quantidade de exemplos 
       inseridos na aprendizagem do modelo é limitada diante da diversidade de discursos criminosos que se enquadram como crimes de injúria racial ou de racismo.
