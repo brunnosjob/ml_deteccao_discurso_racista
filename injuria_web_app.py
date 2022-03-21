@@ -88,7 +88,7 @@ if pag == 'Experimentar o modelo':
 
     #Remoção de stopwords:
     sentenca_limpa = []
-    stpw = stopwords.words('portuguese')
+    stpw = nltk.corpus.stopwords.words("portuguese")
     for token in sentenca_sem_pontuacao:
         if str(token) not in stpw:
             sentenca_limpa.append(token)
