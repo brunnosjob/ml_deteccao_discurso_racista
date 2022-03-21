@@ -7,6 +7,7 @@
 #Importando bibliotecas principais
 import numpy as np
 import streamlit as st
+import string
 import pickle
 import nltk
 import spacy
