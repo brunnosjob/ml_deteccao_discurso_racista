@@ -97,6 +97,7 @@ if pag == 'Experimentar o modelo':
             sentenca_limpa.append(token)
 
     #Função para vetorização de discursos
+    total_de_palavras = 329
     def vetorizacao2(texto):
         vetor = [0] * total_de_palavras
         for token in texto:
